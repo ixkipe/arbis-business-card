@@ -2,8 +2,7 @@ const tabs = [
   'greetings',
   'profile',
   'education',
-  'portfolio',
-  'contacts'
+  'portfolio'
 ];
 
 const colors = [
@@ -24,14 +23,14 @@ function makeEachTabInactive() {
 
 function makeEachContentItemInactive() {
   tabs.forEach(tab => {
-    document.getElementById(tab + 'Content').classList.add('is-hidden');
-    document.getElementById(tab + 'Header').classList.add('is-hidden');
+    document.getElementById(tab + 'Content').setAttribute('hidden', true);
+    document.getElementById(tab + 'Header').setAttribute('hidden', true);
   });
 }
 
 function displayContent(tab) {
-  document.getElementById(tab + 'Content').classList.remove('is-hidden');
-  document.getElementById(tab + 'Header').classList.remove('is-hidden');
+  document.getElementById(tab + 'Content').removeAttribute('hidden');
+  document.getElementById(tab + 'Header').removeAttribute('hidden');
 }
 
 function assignColorToHero(index) {

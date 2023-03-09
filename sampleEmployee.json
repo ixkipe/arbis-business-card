@@ -1,0 +1,73 @@
+{
+  "personalInfo": {
+    "fullName": "Иванов Иван Иваныч",
+    "profilePic": "https://dummyimage.com/900x900",
+    "greetingsVideoLink": "https://joy1.videvo.net/videvo_files/video/free/2013-08/large_watermarked/hd0992_preview.mp4?_gl=1*he6bo0*fp_ga*OTY1MjIyMjYzLjE2NzgzNDI2MDk.*fp_ga_83FH29D8Q8*MTY3ODM0MjYwOS4xLjEuMTY3ODM0MjY0Ni4yMy4wLjA.*fp_ga_NHWE9BKX1G*MTY3ODM0MjYwOS4xLjEuMTY3ODM0MjY0Ni4yMy4wLjA."
+  },
+  "education": [
+    {
+      "date": "2012",
+      "event": "separator"
+    },
+    {
+      "date": "Июнь 2012",
+      "event": "Закончил школу №35 города Архангельска"
+    },
+    {
+      "date": "Сентябрь 2012",
+      "event": "Поступил на обучение в Институт филологии и межкультурной коммуникации САФУ им. М.В. Ломоносова по специальности \"45.03.02 Лингвистика\""
+    },
+    {
+      "date": "2015",
+      "event": "separator"
+    },
+    {
+      "date": "Январь 2015 - Июнь 2015",
+      "event": "Проходил стажировку в городе Тромсё, Норвегия по программе \"Норвежская культура, литература и обществознание\""
+    },
+    {
+      "date": "2016",
+      "event": "separator"
+    },
+    {
+      "date": "Июнь 2016",
+      "event": "Закончил обучение в САФУ по программе бакалавриата \"45.03.02 Лингвистика\""
+    },
+    {
+      "date": "2020",
+      "event": "separator"
+    },
+    {
+      "date": "Июль 2020",
+      "event": "Прошёл профессиональную переподготовку по программе \"Преподавание английского языка\""
+    }
+  ],
+  "portfolio": [
+    {
+      "picture": "https://dummyimage.com/1366x768",
+      "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae commodi ut dolorem esse nihil? Repudiandae animi velit provident similique officiis. Error maiores nostrum aspernatur sapiente natus labore sint recusandae ut?"
+    },
+    {
+      "picture": "https://dummyimage.com/1366x768",
+      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit obcaecati aspernatur autem architecto odit reprehenderit sapiente impedit assumenda, similique veritatis quod ratione velit adipisci officia cupiditate, est quo corporis exercitationem. Culpa, error commodi repudiandae ullam deserunt nam in deleniti? Expedita."
+    },
+    {
+      "picture": "https://dummyimage.com/1366x768",
+      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, ratione ipsam voluptatem doloribus ut quam illo aperiam ducimus labore laudantium inventore perspiciatis veniam! Molestias nihil corrupti officia dolore similique accusamus exercitationem in. Doloremque, corporis porro sit hic voluptate rem laudantium sunt praesentium illum tempora aperiam dignissimos nemo nostrum modi quaerat."
+    }
+  ],
+  "contacts": {
+    "phone": "+7(952)123-45-67",
+    "email": "sample@example.com",
+    "misc": [
+      {
+        "type": "telegram",
+        "value": "divinesupremacy"
+      },
+      {
+        "type": "instagram",
+        "value": "elonmusk"
+      }
+    ]
+  }
+}

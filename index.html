@@ -1,41 +1,15 @@
 <!DOCTYPE html>
 
-<style>
-  .montserrat-font {
-    font-family: 'Montserrat', sans-serif;
-  }
-
-  .raleway-font {
-    font-family: 'Raleway', sans-serif;
-  }
-
-  .nunito-font {
-    font-family: 'Nunito', sans-serif;
-  }
-
-  .gradient-bg {
-    background: rgb(167,213,255);
-    background: linear-gradient(0deg, rgba(167,213,255,1) 0%, rgba(255,255,255,1) 100%);
-  }
-
-  #backToTopBtn {
-    display: none; /* Hidden by default */
-    position: fixed; /* Fixed/sticky position */
-    bottom: 20px; /* Place the button at the bottom of the page */
-    right: 30px; /* Place the button 30px from the right */
-    z-index: 99; /* Make sure it does not overlap */
-  }
-</style>
-
 <html>
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-  <link rel="stylesheet" href="css/bulma-carousel-4.0.24/dist/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="css/bulma-collapsible-1.0.3/dist/css/bulma-collapsible.min.css">
+  <link rel="stylesheet" href="./css/bulma-carousel-4.0.24/dist/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="css/bulma-timeline-3.0.5/dist/css/bulma-timeline.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -93,12 +67,12 @@
             <span>Портфолио</span>
           </a>
         </li>
-        <li id="contacts">
+        <!-- <li id="contacts">
           <a>
             <span class="icon is-small"><i class="fa-solid fa-address-book"></i></span>
             <span>Контакты</span>
           </a>
-        </li>
+        </li> -->
       </ul>
     </div>
   </div>
@@ -112,29 +86,29 @@
         </section>
       </div>
 
-      <div id="profileHeader" class="is-hidden">
+      <div id="profileHeader" hidden>
         <section class="section has-text-centered">
           <h2 class="is-size-2">&#128084; Специализация: должность, навыки</h2>
         </section>
       </div>
 
-      <div id="educationHeader" class="is-hidden">
+      <div id="educationHeader" hidden>
         <section class="section has-text-centered">
           <h2 class="is-size-2">&#127891; Образование</h2>
         </section>
       </div>
 
-      <div id="portfolioHeader" class="is-hidden">
+      <div id="portfolioHeader" hidden>
         <section class="section has-text-centered">
           <h2 class="is-size-2">&#128188; Портфолио</h2>
         </section>
       </div>
 
-      <div id="contactsHeader" class="is-hidden">
+      <!-- <div id="contactsHeader" class="is-hidden">
         <section class="section has-text-centered">
           <h2 class="is-size-2">&#128241; Контакты</h2>
         </section>
-      </div>
+      </div> -->
     </div>
 
     <div class="hero-body" id="mainContentBody">
@@ -146,54 +120,37 @@
         </figure>
       </div>
 
-      <div id="profileContent" class="container has-text-centered is-hidden">
+      <div id="profileContent" class="container has-text-centered" hidden>
         <p class="title">Lorem ipsum dolor sit.</p>
         <p class="subtitle">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima ad dolores rem perspiciatis ex consectetur, pariatur amet at error aliquam a, voluptas distinctio ratione, repudiandae velit nobis perferendis architecto veritatis nihil. Libero incidunt temporibus maxime.</p>
       </div>
 
-      <div id="educationContent" class="container has-text-centered is-hidden">
+      <div id="educationContent" class="container has-text-centered" hidden>
         <p class="title">Lorem ipsum dolor sit.</p>
         <p class="subtitle">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima ad dolores rem perspiciatis ex consectetur, pariatur amet at error aliquam a, voluptas distinctio ratione, repudiandae velit nobis perferendis architecto veritatis nihil. Libero incidunt temporibus maxime.</p>
       </div>
 
-      <div id="portfolioContent" class="container has-text-centered is-hidden">
+      <div id="portfolioContent" class="container has-text-centered" hidden>
         <p class="title">Lorem ipsum dolor sit.</p>
         <p class="subtitle">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima ad dolores rem perspiciatis ex consectetur, pariatur amet at error aliquam a, voluptas distinctio ratione, repudiandae velit nobis perferendis architecto veritatis nihil. Libero incidunt temporibus maxime.</p>
       </div>
 
-      <div id="contactsContent" class="container has-text-centered is-hidden">
+      <!-- <div id="contactsContent" class="container has-text-centered is-hidden">
         <p class="title">Lorem ipsum dolor sit.</p>
         <p class="subtitle">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima ad dolores rem perspiciatis ex consectetur, pariatur amet at error aliquam a, voluptas distinctio ratione, repudiandae velit nobis perferendis architecto veritatis nihil. Libero incidunt temporibus maxime.</p>
-      </div>
+      </div> -->
     </div>
 
-    <div class="hero-foot">
-      <!-- footer -->
-    </div>
+    <!-- <div class="hero-foot">
+      
+    </div> -->
   </section>
 
-  <!-- <section class="section">
-    <section class="hero is-link block montserrat-font">
-      <div class="hero-body">
-        <p class="title">Lorem ipsum dolor sit.</p>
-        <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium veniam cupiditate sequi error architecto. Provident at ea, ducimus, minima maiores velit dolorem temporibus incidunt fugiat nemo obcaecati quaerat. Nemo modi dolores odio culpa dolorem ipsum.</p>
-      </div>
-    </section>
-  
-    <section class="hero is-info block nunito-font">
-      <div class="hero-body">
-        <p class="title">Lorem ipsum dolor sit.</p>
-        <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium veniam cupiditate sequi error architecto. Provident at ea, ducimus, minima maiores velit dolorem temporibus incidunt fugiat nemo obcaecati quaerat. Nemo modi dolores odio culpa dolorem ipsum.</p>
-      </div>
-    </section>
-  
-    <section class="hero is-light block raleway-font">
-      <div class="hero-body">
-        <p class="title">Lorem ipsum dolor sit.</p>
-        <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium veniam cupiditate sequi error architecto. Provident at ea, ducimus, minima maiores velit dolorem temporibus incidunt fugiat nemo obcaecati quaerat. Nemo modi dolores odio culpa dolorem ipsum.</p>
-      </div>
-    </section>
-  </section> -->
+  <footer class="footer gradient-bg-reversed">
+    <div class="container has-text-centered">
+      <p class="subtitle">ayyyyy lmao test test haha footer goes awogalwgal aglawglaogal awowoaeoe alee</p>
+    </div>
+  </footer>
 
   <button class="button is-warning is-small" id="backToTopBtn"><i class="fa-solid fa-arrow-up"></i></button>
 
@@ -207,9 +164,17 @@
     <button class="modal-close is-large" aria-label="close"></button>
   </div>
 
-  <script src="css/bulma-carousel-4.0.24/dist/js/bulma-carousel.min.js"></script>
   <script src="css/bulma-collapsible-1.0.3/dist/js/bulma-collapsible.min.js"></script>
   <script src="./js/index.js"></script>
   <script src="./js/backToTop.js"></script>
+  <script src="./css/bulma-carousel-4.0.24/dist/js/bulma-carousel.min.js"></script>
+  <script>
+    bulmaCarousel.attach('.slider', {
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      infinite: true,
+      pagination: false
+    });
+  </script>
 </body> 
 </html>
