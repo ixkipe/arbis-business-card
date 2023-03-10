@@ -1,3 +1,55 @@
+/**
+ * 
+ * @param {[{picture: string, heading: string, text: string}]} portfolio 
+ */
+function portfolioCarousel(portfolio) {
+  let result = document.createElement('section');
+  result.className = 'section';
+  result.id = 'portfolioContent';
+
+  let container = document.createElement('div');
+  container.className = 'container is-clipped';
+  result.appendChild(container);
+
+  let slider = document.createElement('div');
+  slider.className = 'slider';
+  container.appendChild(slider);
+  
+  portfolio.forEach(item => {
+    let card = document.createElement('div');
+    card.className = 'card';
+    slider.appendChild(card);
+
+    let cardImage = document.createElement('div');
+    cardImage.className = 'card-image';
+    card.appendChild(cardImage);
+
+    let figure = document.createElement('figure');
+    figure.className = 'image is-16by9';
+    cardImage.appendChild(figure);
+
+    let pic = document.createElement('img');
+    pic.src = item.picture;
+    figure.appendChild(pic);
+
+    let cardContent = document.createElement('div');
+    cardContent.className = 'card-content';
+    card.appendChild(cardContent);
+
+    let heading = document.createElement('p');
+    heading.className = 'title';
+    heading.innerText = item.heading;
+    cardContent.appendChild(heading);
+
+    let text = document.createElement('p');
+    text.className = 'subtitle';
+    text.innerText = item.text;
+    cardContent.appendChild(text);
+  });
+
+  return result;
+}
+
 const tabs = [
   'greetings',
   'profile',
@@ -10,6 +62,26 @@ const colors = [
   'is-light',
   'is-link'
 ];
+
+const portfolioContents = [
+  {
+    picture: "https://dummyimage.com/1366x768",
+    heading: "Разработка интеграции Asterisk и amoCRM",
+    text: "Написал программу на C#, выполняющую логгирование звонков: запрашивает информацию о звонках из БД (MySQL) и отправляет их по API в amoCRM"
+  },
+  {
+    picture: "https://dummyimage.com/1366x768",
+    heading: "Сделал вот это портфолио",
+    text: "sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text"
+  },
+  {
+    picture: "https://dummyimage.com/1024x768",
+    heading: "Ещё че-то там сделал",
+    text: "Таким образом укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании направлений прогрессивного развития. Не следует, однако забывать, что укрепление и развитие структуры позволяет выполнять важные задания по разработке модели развития."
+  }
+]
+
+const myBulmaCarousel = portfolioCarousel(portfolioContents);
 
 function openImageModal() {
   openModal(document.getElementById('imageModal'));
@@ -25,12 +97,20 @@ function makeEachContentItemInactive() {
   tabs.forEach(tab => {
     document.getElementById(tab + 'Content').setAttribute('hidden', true);
     document.getElementById(tab + 'Header').setAttribute('hidden', true);
+
+    if (tab == 'portfolio' && document.getElementById('portfolioContent').contains(myBulmaCarousel)) {
+      document.getElementById('portfolioContent').removeChild(myBulmaCarousel);
+    }
   });
 }
 
 function displayContent(tab) {
-  document.getElementById(tab + 'Content').removeAttribute('hidden');
   document.getElementById(tab + 'Header').removeAttribute('hidden');
+  document.getElementById(tab + 'Content').removeAttribute('hidden');
+
+  if (tab == 'portfolio') {
+    document.getElementById(tab + 'Content').appendChild(myBulmaCarousel);
+  }
 }
 
 function assignColorToHero(index) {

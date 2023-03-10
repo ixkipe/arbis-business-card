@@ -45,14 +45,17 @@
   "portfolio": [
     {
       "picture": "https://dummyimage.com/1366x768",
+      "heading": "Lorem ipsum dolor sit",
       "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae commodi ut dolorem esse nihil? Repudiandae animi velit provident similique officiis. Error maiores nostrum aspernatur sapiente natus labore sint recusandae ut?"
     },
     {
       "picture": "https://dummyimage.com/1366x768",
+      "heading": "Lorem ipsum dolor sit",
       "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit obcaecati aspernatur autem architecto odit reprehenderit sapiente impedit assumenda, similique veritatis quod ratione velit adipisci officia cupiditate, est quo corporis exercitationem. Culpa, error commodi repudiandae ullam deserunt nam in deleniti? Expedita."
     },
     {
       "picture": "https://dummyimage.com/1366x768",
+      "heading": "Lorem ipsum dolor sit",
       "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, ratione ipsam voluptatem doloribus ut quam illo aperiam ducimus labore laudantium inventore perspiciatis veniam! Molestias nihil corrupti officia dolore similique accusamus exercitationem in. Doloremque, corporis porro sit hic voluptate rem laudantium sunt praesentium illum tempora aperiam dignissimos nemo nostrum modi quaerat."
     }
   ],
