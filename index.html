@@ -24,16 +24,16 @@
           <div class="columns is-centered">
             <div class="column">
               <figure class="image is-128x128 is-inline-block">
-                <img src="https://dummyimage.com/900x900" id="profilePic" class="is-rounded is-clickable">
+                <img id="profilePic" class="is-rounded is-clickable">
               </figure>
             </div>
           </div>
-          <p class="title" id="employeeFullName"><em>Иванов Иван Иваныч</em></p>
+          <p class="title"><em id="employeeFullName"></em></p>
           <div class="columns is-centered is-vcentered">
-            <div class="column has-text-right-tablet is-narrow">
-              <p class="subtitle">Сотрудник компании </p>
+            <div class="column has-text-right-tablet is-narrow p-2">
+              <p class="subtitle">Сотрудник компании</p>
             </div>
-            <div class="column has-text-left-tablet is-narrow">
+            <div class="column has-text-left-tablet is-narrow p-2">
               <a href="https://arbis29.ru" target="_blank"><img src="https://arbis29.ru/bitrix/templates/f5studio/img/site_logo.png" alt="Арбис"></a>
             </div>
           </div>
@@ -78,7 +78,7 @@
   </div>
 
 
-  <section class="hero is-info is-medium nunito-font" id="mainContent">
+  <section class="hero is-info nunito-font" id="mainContent">
     <div class="hero-head" id="heroHead">
       <div id="greetingsHeader">
         <div class="container has-text-centered mt-5">
@@ -121,13 +121,21 @@
         </figure>
       </div>
 
-      <div id="profileContent" class="container has-text-centered" hidden>
-        <p class="title">Lorem ipsum dolor sit.</p>
-        <p class="subtitle">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima ad dolores rem perspiciatis ex consectetur, pariatur amet at error aliquam a, voluptas distinctio ratione, repudiandae velit nobis perferendis architecto veritatis nihil. Libero incidunt temporibus maxime.</p>
+      <div id="profileContent" class="container" hidden>
+        <div class="content has-text-left">
+          <h2 class="is-size-2">Название подразделения</h2>
+          <p class="subtitle" id="departmentTitle"></p>
+          <h2 class="is-size-2">Должность</h2>
+          <p class="subtitle" id="position"></p>
+          <h3 class="is-size-3">Обязанности</h3>
+          <ol id="responsibilities"></ol>
+          <h3 class="is-size-3">Навыки</h3>
+          <ul id="skills"></ul>
+        </div>
       </div>
 
-      <div id="educationContent" class="container has-text-centered" hidden>
-        <div class="timeline is-rtl" id="eduTimeline"></div>
+      <div id="educationContent" class="container" hidden>
+        <div class="timeline is-centered" id="eduTimeline"></div>
       </div>
 
       <div id="portfolioContent" class="container has-text-centered" hidden></div>
@@ -143,9 +151,9 @@
     </div> -->
   </section>
 
-  <footer class="footer gradient-bg-reversed">
-    <div class="container has-text-centered">
-      <p class="subtitle">ayyyyy lmao test test haha footer goes awogalwgal aglawglaogal awowoaeoe alee</p>
+  <footer class="footer gradient-bg-reversed nunito-font">
+    <div class="container has-text-centered" id="contactsFooter">
+      <h5 class="is-size-5"><strong>Связаться со мной:</strong></h5>
     </div>
   </footer>
 
@@ -174,7 +182,7 @@
           slidesToScroll: 1,
           slidesToShow: 1,
           infinite: true,
-          pagination: false
+          pagination: false,
         });
       }, 1);
     });

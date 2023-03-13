@@ -8,24 +8,42 @@ function createTimeline(timelineEvents) {
   // code for populating the timeline with events
   timelineEvents.forEach(timelineEvent => {
     if (timelineEvent.event == 'separator') {
-      eduTimeline.appendChild(timelineYearSeparator(timelineEvent.date));
+      eduTimeline.appendChild(timelineYearSeparator(timelineEvent.date, true));
     }
     else {
       eduTimeline.appendChild(timelineContent(timelineEvent.date, timelineEvent.event));
     }
   });
+
+  eduTimeline.appendChild(timelineFinish());
+}
+
+function timelineFinish() {
+  let result = document.createElement('header');
+  result.className = 'timeline-header';
+
+  let text = document.createElement('span');
+  text.className = 'tag is-info is-medium';
+
+  let icon = document.createElement('i');
+  icon.className = 'fa-solid fa-flag-checkered';
+  text.appendChild(icon);
+
+  result.appendChild(text);
+  return result;
 }
 
 /**
  * 
  * @param {string} year 
+ * @param {boolean} isSmall
  */
-function timelineYearSeparator(year) {
+function timelineYearSeparator(year, isSmall) {
   let result = document.createElement('header');
   result.className = 'timeline-header';
 
   let text = document.createElement('span');
-  text.className = 'tag is-info';
+  text.className = isSmall ? 'tag is-info' : 'tag is-info is-medium';
   text.innerText = year;
 
   result.appendChild(text);
