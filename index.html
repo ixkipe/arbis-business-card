@@ -127,8 +127,7 @@
       </div>
 
       <div id="educationContent" class="container has-text-centered" hidden>
-        <p class="title">Lorem ipsum dolor sit.</p>
-        <p class="subtitle">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima ad dolores rem perspiciatis ex consectetur, pariatur amet at error aliquam a, voluptas distinctio ratione, repudiandae velit nobis perferendis architecto veritatis nihil. Libero incidunt temporibus maxime.</p>
+        <div class="timeline is-rtl" id="eduTimeline"></div>
       </div>
 
       <div id="portfolioContent" class="container has-text-centered" hidden></div>
@@ -150,7 +149,7 @@
     </div>
   </footer>
 
-  <button class="button is-warning is-small" id="backToTopBtn"><i class="fa-solid fa-arrow-up"></i></button>
+  <button class="button is-warning" id="backToTopBtn"><i class="fa-solid fa-arrow-up"></i></button>
 
   <div class="modal" id="imageModal">
     <div class="modal-background"></div>
@@ -171,7 +170,7 @@
   <script>
     document.getElementById('portfolioAnchor').addEventListener('click', () => {
       const timeout = setTimeout(() => {
-        bulmaCarousel.attach('.slider', {
+        bulmaCarousel.attach('#bulmaPortfolioSlider', {
           slidesToScroll: 1,
           slidesToShow: 1,
           infinite: true,

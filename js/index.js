@@ -3,16 +3,16 @@
  * @param {[{picture: string, heading: string, text: string}]} portfolio 
  */
 function portfolioCarousel(portfolio) {
-  let result = document.createElement('section');
-  result.className = 'section';
-  result.id = 'portfolioContent';
+  // let result = document.createElement('section');
+  // result.className = 'section';
+  // result.id = 'portfolioContent';
 
   let container = document.createElement('div');
   container.className = 'container is-clipped';
-  result.appendChild(container);
 
   let slider = document.createElement('div');
   slider.className = 'slider';
+  slider.id = 'bulmaPortfolioSlider';
   container.appendChild(slider);
   
   portfolio.forEach(item => {
@@ -47,6 +47,87 @@ function portfolioCarousel(portfolio) {
     cardContent.appendChild(text);
   });
 
+  return container;
+}
+
+/**
+ * 
+ * @param {[{date: string, event: string}]} timelineEvents 
+ */
+function createTimeline(timelineEvents) {
+  let eduTimeline = document.getElementById('eduTimeline');
+
+  // code for populating the timeline with events
+  timelineEvents.forEach(timelineEvent => {
+    if (timelineEvent.event == 'separator') {
+      eduTimeline.appendChild(timelineYearSeparator(timelineEvent.date, true));
+    }
+    else {
+      eduTimeline.appendChild(timelineContent(timelineEvent.date, timelineEvent.event));
+    }
+  });
+
+  eduTimeline.appendChild(timelineFinish());
+}
+
+function timelineFinish() {
+  let result = document.createElement('header');
+  result.className = 'timeline-header';
+
+  let text = document.createElement('span');
+  text.className = 'tag is-info is-medium';
+
+  let icon = document.createElement('i');
+  icon.className = 'fa-solid fa-flag-checkered';
+  text.appendChild(icon);
+
+  result.appendChild(text);
+  return result;
+}
+
+/**
+ * 
+ * @param {string} year 
+ * @param {boolean} isSmall
+ */
+function timelineYearSeparator(year, isSmall) {
+  let result = document.createElement('header');
+  result.className = 'timeline-header';
+
+  let text = document.createElement('span');
+  text.className = isSmall ? 'tag is-info' : 'tag is-info is-medium';
+  text.innerText = year;
+
+  result.appendChild(text);
+  return result;
+}
+
+/**
+ * 
+ * @param {string} date 
+ * @param {string} event 
+ */
+function timelineContent(date, event) {
+  let result = document.createElement('div');
+  result.className = 'timeline-item';
+
+  let marker = document.createElement('div');
+  marker.className = 'timeline-marker is-info';
+  result.appendChild(marker);
+
+  let content = document.createElement('div');
+  content.className = 'timeline-content';
+  result.appendChild(content);
+
+  let heading = document.createElement('h6');
+  heading.className = 'heading is-size-6';
+  heading.innerText = date;
+  content.appendChild(heading);
+
+  let text = document.createElement('p');
+  text.innerText = event;
+  content.appendChild(text);
+
   return result;
 }
 
@@ -63,6 +144,45 @@ const colors = [
   'is-link'
 ];
 
+const education = [
+  {
+    "date": "2012",
+    "event": "separator"
+  },
+  {
+    "date": "Июнь 2012",
+    "event": "Закончил школу №35 города Архангельска"
+  },
+  {
+    "date": "Сентябрь 2012",
+    "event": "Поступил на обучение в Институт филологии и межкультурной коммуникации САФУ им. М.В. Ломоносова по специальности \"45.03.02 Лингвистика\""
+  },
+  {
+    "date": "2015",
+    "event": "separator"
+  },
+  {
+    "date": "Январь 2015 - Июнь 2015",
+    "event": "Проходил стажировку в городе Тромсё, Норвегия по программе \"Норвежская культура, литература и обществознание\""
+  },
+  {
+    "date": "2016",
+    "event": "separator"
+  },
+  {
+    "date": "Июнь 2016",
+    "event": "Закончил обучение в САФУ по программе бакалавриата \"45.03.02 Лингвистика\""
+  },
+  {
+    "date": "2020",
+    "event": "separator"
+  },
+  {
+    "date": "Июль 2020",
+    "event": "Прошёл профессиональную переподготовку по программе \"Преподавание английского языка\""
+  }
+];
+
 const portfolioContents = [
   {
     picture: "https://dummyimage.com/1366x768",
@@ -71,7 +191,7 @@ const portfolioContents = [
   },
   {
     picture: "https://dummyimage.com/1366x768",
-    heading: "Сделал вот это портфолио",
+    heading: "Сделал вот эту визитку",
     text: "sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text"
   },
   {
@@ -99,7 +219,11 @@ function makeEachContentItemInactive() {
     document.getElementById(tab + 'Header').setAttribute('hidden', true);
 
     if (tab == 'portfolio' && document.getElementById('portfolioContent').contains(myBulmaCarousel)) {
-      document.getElementById('portfolioContent').removeChild(myBulmaCarousel);
+      console.log(tab == 'portfolio');
+      console.log(document.getElementById('portfolioContent').contains(myBulmaCarousel));
+      
+      myBulmaCarousel.remove();
+      console.log(document.getElementById('portfolioContent').contains(myBulmaCarousel));
     }
   });
 }
@@ -108,7 +232,7 @@ function displayContent(tab) {
   document.getElementById(tab + 'Header').removeAttribute('hidden');
   document.getElementById(tab + 'Content').removeAttribute('hidden');
 
-  if (tab == 'portfolio') {
+  if (tab == 'portfolio' && !(document.getElementById('portfolioContent').contains(myBulmaCarousel))) {
     document.getElementById(tab + 'Content').appendChild(myBulmaCarousel);
   }
 }
@@ -142,6 +266,8 @@ function closeAllModals() {
 
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('profilePic').onclick = () => openImageModal();
+
+  createTimeline(education);
 
   tabs.forEach(tab => {
     let currentTab = document.getElementById(tab);
