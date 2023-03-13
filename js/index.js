@@ -371,6 +371,8 @@ const colors = [
 
 const myBulmaCarousel = portfolioCarousel(employee.portfolio);
 
+//#region miscellaneous-content-manipulation
+
 function openImageModal() {
   openModal(document.getElementById('imageModal'));
 }
@@ -437,6 +439,8 @@ function closeAllModals() {
     closeModal($modal);
   });
 }
+
+//#endregion miscellaneous-content-manipulation
 
 document.addEventListener('DOMContentLoaded', () => {
   displayPersonalInfo();
